@@ -21,9 +21,9 @@ RUN groupadd cloud -g 1001 \
 
 RUN sed -i 's/User apache/User cloud/g' /etc/httpd/conf/httpd.conf \
  && sed -i 's/Group apache/Group cloud/g' /etc/httpd/conf/httpd.conf \
- && sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf \
- && sed -i 's/Listen 443/Listen 8443/g' /etc/httpd/conf.d/ssl.conf \
- && sed -i 's/VirtualHost _default_:443/VirtualHost _default_:8443/g' /etc/httpd/conf.d/ssl.conf
+ && sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf
+# && sed -i 's/Listen 443/Listen 8443/g' /etc/httpd/conf.d/ssl.conf \
+# && sed -i 's/VirtualHost _default_:443/VirtualHost _default_:8443/g' /etc/httpd/conf.d/ssl.conf
 
 RUN ln -sf /dev/stdout /etc/httpd/logs/access_log \
  && ln -sf /dev/stderr /etc/httpd/logs/error_log
