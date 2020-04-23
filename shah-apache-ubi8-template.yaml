@@ -170,7 +170,7 @@ parameters:
   displayName: Git Repository URL
   name: SOURCE_REPOSITORY_URL
 #  value: https://shah@git-ti.example.com:8443/scm/openshift/shah-apache.git
-  value: https://github.com/shah-zobair/shah-apache.git
+  value: https://github.com/shah-zobair/shah-apache-ubi.git
 - description: Set this to a branch name, tag or other ref of your repository if you
     are not using the default branch.
   displayName: Git Reference
